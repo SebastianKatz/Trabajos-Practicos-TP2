@@ -7,18 +7,17 @@ const leerAsincronicoPromisesAsyncAwait = async function (){
     let contObj = JSON.parse( await fs.promises.readFile(ruta,"utf-8"))
     let contString = JSON.stringify(contObj)
     let size = (await fs.promises.stat(ruta)).size;
-    let obj = {
+    let info = {
     contenidoStr: contString,
     contenidoObj: contObj,
     size: size
     }
 
-    console.log(obj);
+    console.log(info);
     await fs.promises.writeFile("./infomapaa.txt",JSON.stringify(obj))
     } catch(error) {
         console.log(error);
     }
 }
 
-console.log("otras operaciones... (demostrando asinconismo)");
 leerAsincronicoPromisesAsyncAwait()
