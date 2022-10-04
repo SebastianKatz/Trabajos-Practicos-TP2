@@ -13,7 +13,7 @@
         .then(stats=>{
             info.size=stats.size
             console.log(info)
-            return fs.promises.writeFile("./infomaptc.txt",JSON.stringify(obj))
+            return fs.promises.writeFile("./infomaptc.txt",JSON.stringify(info))
         })
         .catch(error=>console.log(error)) 
 }

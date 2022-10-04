@@ -14,7 +14,7 @@ const leerAsincronicoPromisesAsyncAwait = async function (){
     }
 
     console.log(info);
-    await fs.promises.writeFile("./infomapaa.txt",JSON.stringify(obj))
+    await fs.promises.writeFile("./infomapaa.txt",JSON.stringify(info))
     } catch(error) {
         console.log(error);
     }
